@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广东今日油价</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+        .update-badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .price-grid {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .price-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .oil-type {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .oil-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+        }
+        .oil-92 { background: #4caf50; }
+        .oil-95 { background: #ff9800; }
+        .oil-0 { background: #2196f3; }
+        .oil-info h3 {
+            color: #333;
+            font-size: 16px;
+        }
+        .oil-info span {
+            color: #999;
+            font-size: 12px;
+        }
+        .price {
+            text-align: right;
+        }
+        .price .amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .price .unit {
+            font-size: 14px;
+            color: #666;
+        }
+        .notice {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⛽ 广东省今日油价</h1>
+            <p>政府指导价（元/升）</p>
+            <div class="update-badge" id="updateTime">2025-03-14</div>
+        </div>
+        
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="oil-type">
+                    <div class="oil-icon oil-92">92#</div>
+                    <div class="oil-info">
+                        <h3>92号汽油</h3>
+                        <span>家用轿车常用</span>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="amount">¥7.66</div>
+                    <div class="unit">元/升</div>
+                </div>
+            </div>
+            
+            <div class="price-card">
+                <div class="oil-type">
+                    <div class="oil-icon oil-95">95#</div>
+                    <div class="oil-info">
+                        <h3>95号汽油</h3>
+                        <span>中高端车型推荐</span>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="amount">¥8.29</div>
+                    <div class="unit">元/升</div>
+                </div>
+            </div>
+            
+            <div class="price-card">
+                <div class="oil-type">
+                    <div class="oil-icon oil-0">0#</div>
+                    <div class="oil-info">
+                        <h3>0号柴油</h3>
+                        <span>货车/柴油车</span>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="amount">¥7.30</div>
+                    <div class="unit">元/升</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notice">
+            <strong>💡 温馨提示：</strong><br>
+            1. 价格来源于国家发改委最新调价通知<br>
+            2. 实际价格请以加油站标价为准，进站加油享受优惠活动价
+        </div>
+    </div>
+</body>
+</html>
